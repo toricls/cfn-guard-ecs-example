@@ -7,7 +7,7 @@ See also [this repo](https://github.com/aws-cloudformation/cloudformation-guard)
 ## Setup
 
 1. Clone this repo
-2. Spin up a devcontainer within Visual Studio Code (This may take several minutes to build Rust and the cfn-guard/cfn-guard-rulegen binaries, have a coffee break ☕️)
+2. Spin up a devcontainer within Visual Studio Code (This may take several minutes to build Rust and the `cfn-guard`/`cfn-guard-rulegen` binaries, have a coffee break ☕️)
 
 ## Usage
 
