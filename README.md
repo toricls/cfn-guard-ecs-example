@@ -2,6 +2,8 @@
 
 with VSCode remote containers configurations.
 
+See also [this repo](https://github.com/aws-cloudformation/cloudformation-guard) for futher information about cloudformation-guard.
+
 ## Setup
 
 1. Clone this repo
