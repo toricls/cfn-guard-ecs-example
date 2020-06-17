@@ -1,0 +1,12 @@
+let task_memory = 512
+let task_cpu = 256
+let task_network_mode = awsvpc
+let allowed_container_log_driver = [awslogs]
+
+AWS::ECS::TaskDefinition Memory == %task_memory
+AWS::ECS::TaskDefinition Cpu == %task_cpu
+AWS::ECS::TaskDefinition NetworkMode == %task_network_mode
+AWS::ECS::TaskDefinition TaskRoleArn == /arn:aws:iam::\d{12}:role/ecsTaskRole/
+AWS::ECS::TaskDefinition ExecutionRoleArn == /arn:aws:iam::\d{12}:role/ecsTaskExecutionRole/
+AWS::ECS::TaskDefinition ContainerDefinitions.*.Privileged != true 
+AWS::ECS::TaskDefinition ContainerDefinitions.*.LogConfiguration.LogDriver IN %allowed_container_log_driver
