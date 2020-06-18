@@ -14,6 +14,7 @@ See also [this repo](https://github.com/aws-cloudformation/cloudformation-guard)
 1. After the setup, open a new terminal in the VSCode window
 2. Try `cfn-guard -t examples/cfn-yamls/compliant.yaml -r examples/rules/ecs_taskdef_template.ruleset` to test a compliant CFn template
 3. Try `cfn-guard -t examples/cfn-yamls/uncompliant.yaml -r examples/rules/ecs_taskdef_template.ruleset` to test an uncompliant CFn template, and you'll see some validation errors :)
+4. Plus, you can do "field existence testing" with `--strict-checks` option. Try `cfn-guard --strict-checks -t examples/cfn-yamls/uncompliant.yaml -r examples/rules/ecs_taskdef_template.ruleset` and you'll find one more error (`... it does not contain the required property ...`) in addition to the previous test's result.
 
 ## Author
 
